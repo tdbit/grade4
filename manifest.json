@@ -1,0 +1,9 @@
+{
+  "short_name": "4 Orange",
+  "name": "ISF Grade 4 Orange",
+  "icons": [],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "white",
+  "background_color": "orange"
+}
