@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4th Grade Orange Class – Parent Resources</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        background: linear-gradient(to bottom, #f97316, #e25306);
+        color: #1f2937;
+      }
+      .container {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      header h1 {
+        color: white;
+        font-size: 1.8rem;
+        margin: 0;
+      }
+      header p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+      }
+      .tip {
+        background: white;
+        border-radius: 0.2rem;
+        padding: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      section h2 {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.1rem;
+        margin: 1.5rem 0 0 0;
+
+        + p {
+          margin-top: 0.25rem;
+          font-size: 0.8rem;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      li a {
+        display: flex;
+        border-radius: 0.2rem;
+        gap: 0.75rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        background: white;
+        padding: 1rem;
+        padding-bottom: 0.5rem;
+        text-decoration: none;
+        color: #111827;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 125%;
+      }
+      li a:hover {
+        background: #f9fafb;
+      }
+      li div i {
+        padding-top: 0.5rem;
+      }
+      li a p {
+        color: #6b7280;
+        margin-top: 0.25rem;
+        font-weight: 300;
+      }
+      .fa-solid,
+      .fa-regular {
+        color:orangered;
+        font-size: 2rem;
+        overflow: hidden;
+      }
+      footer {
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      footer a {
+        color: #fff7ed;
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/a38f30af22.js" crossorigin="anonymous"></script>
+    <script>
+      const links = [
+        {
+          category: "Basics",
+          notes: "Essential links to get started this school year.",
+          items: [
+            {
+              icon: 'fa-solid fa-user',
+              title: "Meet the teachers",
+              url: "https://example.com/newsletter",
+              description:"1-min intro video & welcome letter from your kids' teachers.",
+            },
+            {
+              icon: 'fa-solid fa-person-chalkboard',
+              title: "La Rentrée Presentation",
+              url: "https://docs.google.com/presentation/d/1V5DURXJbg_GhN1fhzSlGo8UwrPjlO4syBIFzW7_QYFY/edit?usp=sharing",
+              description:
+                "Slides from the 4th Grade Orange Back to School night.",
+            },
+            {
+              icon: 'fa-solid fa-child',
+              title: "Class List",
+              url: "https://docs.google.com/spreadsheets/d/1AUH5gplwdzrAKwU2QAXojHt8Lu3D83HFDiVkQ9oQiYI/edit",
+              description: "Full list of the kids in the class.",
+            },
+          ],
+        },
+        {
+          category: "Apps & Tools",
+          notes: "Essential apps and tools for 4th Grade Orange parents.",
+          items: [
+            {
+              icon: 'fa-solid fa-mobile-screen',
+              title: "International School App",
+              url: "https://www.google.com/url?q=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fthe-international-school-of-sf%2Fid6748925955&sa=D&sntz=1&usg=AOvVaw3abY9pNoK7nijxOZZBV43Q",
+              description: "Download the official ISF app for news, events, and resources.",
+            },
+            {
+
+              icon: 'fa-solid fa-mobile-screen',
+              title: "SchoolPass App",
+              url: "https://www.google.com/url?q=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fschoolpass%2Fid1522645864&sa=D&sntz=1&usg=AOvVaw0tXGokHFrDKVe0lBsgEqWD",
+              description: "Manage kids' pick-up/drop-off, attendance, and guardians.",
+            },
+            {
+              icon: 'fa-solid fa-book',
+              title: "SchoolPass User Guide",
+              url: "https://docs.google.com/document/d/1_56zvZqfwfFNHxfue3OKNz-qziqKQJ2A1JTTK920loo/edit?tab=t.0",
+              description: "Useful guide on how to use the SchoolPass app.",
+            }
+          ]
+        },
+        {
+          category: "Learning Resources",
+          notes: "Homework, class materials, and learning resources.",
+          items: [
+            {
+              title: "Padlet des devoirs",
+              url: "https://padlet.com/sonia_bleulaine/cm1-orange-violet-2025-2026-b959f6av0qtnxtxg",
+              description: "Class homework assignments and resources.",
+            },
+          ],
+        },
+        {
+          category: "Discussion Forums",
+          notes: "Join these groups to connect with other parents.",
+          items: [
+
+            {
+              icon: 'fa-brands fa-whatsapp',
+              title: "4-Orange WhatsApp Group",
+              url: "https://chat.whatsapp.com/EaGCNoy8VKS4yTZw0er0Nv",
+              description: "Join the 4-Orange only parent WhatsApp group for class-specific questions.",
+            },
+
+            {
+              icon: 'fa-brands fa-whatsapp',
+              title: "Grade-wide WhatsApp Group",
+              url: "https://chat.whatsapp.com/ENH4mLEz5tf7jdbsv555Zk",
+              description: "Join the 4th Grade WhatsApp group for grade-specific questions and updates.",
+            }
+          ]
+        },
+        {
+          category: "Schedules & Calendars",
+          notes: "All dates subject to change; always check school communications for latest updates!",
+          items: [
+            {
+              icon: 'fa-solid fa-thumbs-up',
+              title: "4-Orange Fall Social Sign-Up",
+              url: "https://doodle.com/group-poll/participate/avJLNQVa/vote",
+              description: "Vote for a date & sign up for the 4-Orange Fall Social event.",
+            },
+            {
+              icon: 'fa-solid fa-calendar',
+              title: "Academic Calendar",
+              url: "https://resources.finalsite.net/images/v1746037044/internationalsf/luekc9r7zmfmjq87qy5f/2025-2026AcademicCalendar.pdf",
+              description:
+                "PDF of the full school year calendar (holidays, breaks, etc).",
+            },
+            {
+              icon: 'fa-solid fa-clock',
+              title: "Orange Class Daily Schedule",
+              url: "https://docs.google.com/spreadsheets/d/1zTh_lH6GEnXEfauTieBwt5onntzkM7Auw4Jdbm0yYik/edit?gid=1750799814#gid=1750799814",
+              description:
+                "Typical daily schedule with specials, recess, and lunch times.",
+            },
+            {
+              icon: 'fa-solid fa-calendar-check',
+              title: "4th Grade Events & Sign-Ups",
+              url: "https://docs.google.com/spreadsheets/d/1TkrwcggnZvKLYnvW4RNzN1Fk30y_b0k-6Py-FJ2csC4/edit?gid=1335933520#gid=1335933520",
+              description: "Spreadsheet of major 4th-grade events, field trips & volunteer sign-ups.",
+            },
+
+            {
+              icon: 'fa-solid fa-calendar-check',
+              title: "Lower School Events & Sign-Ups",
+              url: "https://docs.google.com/spreadsheets/d/1o4KHOJLGtTRB1pogg-YLrVXF1ZPEouOAgLWRiiocQ2I/edit?gid=1335933520#gid=1335933520",
+              description: "Spreadsheet of major Lower School events, field trips & volunteer sign-ups.",
+            },
+          ],
+        },
+        {
+          category: "Class Support & Volunteering",
+          notes: "Volunteering is optional but appreciated! See also the scheduling links above for more volunteer opportunities.",
+          items: [
+            {
+              icon: 'fa-solid fa-handshake',
+              title: "Orange Volunteer Sign-Up Sheet",
+              url: "https://docs.google.com/spreadsheets/d/1UAi5DcO-WPQSxkKzqRElcFEXbSUMYNGgPWjeL5NiMD0/edit?gid=1045102829#gid=1045102829",
+              description: "Spreadsheet to sign up for classroom volunteering - currently 10/1.",
+            },
+            {
+              title: "Lost & Found Volunteer Sign-Up",
+              url: "https://docs.google.com/spreadsheets/d/11ujm_5A5fTFQ4qj4L2-YtteEuzYsWoW2WSpJ9eGLWU4/edit?gid=0#gid=0",
+              description: "Help manage the Lost & Found bin (typically once a month).",
+            },
+          ],
+        },
+        {
+          category: "Lunch & Cafeteria",
+          notes: "For when making lunch just isn't an option.",
+          items: [
+            {
+              icon: 'fa-solid fa-utensils',
+              title: "Nina's Cafe Kids Menu",
+              url: "https://ninascafe.com/kids-menu/",
+              description: "View the weekly lunch menu for kids at Nina's Cafe.",
+            },
+            {
+              icon: 'fa-solid fa-utensils',
+              title: "Planet Cafe Lunch Ordering",
+              url: "https://planetcafedelivery.com/index.html",
+              description: "Order lunches from Planet Cafe for your child.",
+            },
+          ],
+        },
+        {
+          category: "Extracurricular Activities & Camps",
+          notes: "After school and vacation camps available for your child.",
+          items: [
+            {
+              icon: 'fa-solid fa-basketball',
+              title: "4th Grade Sports Information",
+              url: "https://sites.google.com/internationalsf.org/4-8-student-athletic-resources/4th-grade-sports",
+              description: "Info on sports offered to 4th graders, including sign-ups.",
+            },
+            {
+              icon: 'fa-solid fa-calendar',
+              title: "ECC Calendar",
+              url: "https://docs.google.com/spreadsheets/d/1Gwc3XTC3iccX3I2Q0mYVpMpSvbyiX9UWz8jNWfVsf7c/edit?gid=0#gid=0",
+              description: "Calendar of extracurricular activities offered through the ECC.",
+            },
+            {
+              icon: 'fa-solid fa-music',
+              title: "Music Conservatory Sign-Up",
+              url: "https://docs.google.com/forms/d/e/1FAIpQLSdxjlr8ZkQcNtmuS71UIUA57SbrYt9gVF4RgLp9cTVGQD1eNQ/viewform",
+              description: "Sign up for private music lessons through the ISF Music Conservatory.",
+            },
+            {
+              icon: 'fa-solid fa-tree',
+              title: "Oak Campus Vacation Camp Sign-Up",
+              url: "https://docs.google.com/forms/d/e/1FAIpQLSdD-GwCQDHys--wBh5dKBXpbniDudTiSpZOE-ts3PHj1Tf_EQ/viewform",
+              description: "Sign up for Oak Campus Vacation Camps during school breaks.",
+            },
+            {
+              icon: 'fa-solid fa-soccer-ball',
+              title: "Soccer Camp Sign-Up",
+              url: "https://docs.google.com/forms/d/e/1FAIpQLSdC1dJk1px39_Db4aMCNudS_ASBCBAkvsMcKR_0-VbHhF0QJw/viewform",
+              description: "Sign up for soccer camps offered during school breaks.",
+            },
+            // {
+            //   icon: 'fa-solid fa-comments',
+            //   title: "Adult French Classes",
+            //   url: "https://www.speakparenteducation.com/adult-french-classes.html",
+            //   description: "Information and sign-up for adult French classes through Speak Parent Education.",
+            // }
+          ],
+        },
+
+
+
+      ];
+
+      function createIconElement(iconClass) {
+        const icon = document.createElement("i");
+        icon.className = `fa-regular ${iconClass}`;
+        icon.style.marginRight = "0.5rem";
+        return icon;
+      }
+
+      function createLinkItem(link) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = link.url;
+        a.target = "_blank";
+        const title = document.createElement("strong");
+        title.textContent = link.title;
+
+        const div = document.createElement("div");
+        div.appendChild(title);
+
+        const p = document.createElement("p");
+        p.textContent = link.description;
+        div.appendChild(p);
+
+        const box = document.createElement("div");
+        const icon = createIconElement(link.icon || 'fa-question-circle');
+        box.appendChild(icon);
+        a.appendChild(box);
+        a.appendChild(div);
+
+        li.appendChild(a);
+        return li;
+      }
+
+      function createCategorySection(category) {
+        const section = document.createElement("section");
+        const h2 = document.createElement("h2");
+        h2.textContent = category.category;
+        section.appendChild(h2);
+
+        const notes = document.createElement("p");
+        notes.textContent = category.notes || "";
+        section.appendChild(notes);
+
+        const ul = document.createElement("ul");
+        category.items.forEach((item) => {
+          ul.appendChild(createLinkItem(item));
+        });
+        section.appendChild(ul);
+        return section;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const container = document.querySelector(".container");
+        links.forEach((category) => {
+          container.appendChild(createCategorySection(category));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>4th Grade Orange Class</h1>
+        <p>Quick links for parents & guardians</p>
+      </header>
+      <div class="tip">
+        💡 <strong>Pro tip:</strong> Add this page to your phone’s home screen
+        for one-tap access.
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <footer>
+      Need an edit? Email <a href="mailto:amldrummond@gmail.com">Andrea</a>.
+    </footer>
+  </div>
+</body>
+</html>
