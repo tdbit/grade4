@@ -57,6 +57,12 @@
         flex-direction: column;
         gap: 0.75rem;
       }
+      hr {
+        /* white line with slight padding */
+        border: none;
+        border-top: 2px solid rgba(255, 255, 255, 0.5);
+        margin: 2rem 0;
+      }
       li a {
         display: flex;
         border-radius: 0.2rem;
@@ -390,7 +396,11 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         const container = document.querySelector(".container");
-        links.forEach((category) => {
+        links.filter(c => c.important).forEach((category) => {
+          container.appendChild(createCategorySection(category));
+        });
+        container.appendChild(document.createElement("hr"));
+        links.filter(c => !c.important).forEach((category) => {
           container.appendChild(createCategorySection(category));
         });
       });
