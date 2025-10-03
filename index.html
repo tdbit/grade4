@@ -107,7 +107,58 @@
     </style>
     <script src="https://kit.fontawesome.com/a38f30af22.js" crossorigin="anonymous"></script>
     <script>
-      const links = [
+  // --- BEGIN: links array ---
+  const links = [
+        {
+          category: "Time Sensitive",
+          important: true,
+          notes: "Due-date reminders: forms, sign-ups, and volunteering needs.",
+          items: [
+            {
+              icon: 'fa-regular fa-snowflake',
+              title: "Winter Sports Sign up due 10/8",
+              url: "https://docs.google.com/spreadsheets/d/1LxIWdFS5Xx80Xp3STRMpcwmJLXI28IGXTdnxdDctSVg/edit?usp=sharing",
+              description: "Last call for for winter sports sign ups!! The winter season will start the week of November 17th",
+            },
+            {
+              icon: 'fa-solid fa-thumbs-up',
+              title: "4-Orange Fall Social Sign-Up",
+              url: "https://forms.gle/yz6kTXFr7o6R9iqf8",
+              description: "Vote for a date & sign up for the 4-Orange Fall Social event.",
+            },
+            {
+              icon: 'fa-solid fa-handshake',
+              title: "Orange Volunteer Sign-Up Sheet",
+              url: "https://docs.google.com/spreadsheets/d/1UAi5DcO-WPQSxkKzqRElcFEXbSUMYNGgPWjeL5NiMD0/edit?gid=1045102829#gid=1045102829",
+              description: "Spreadsheet to sign up for classroom volunteering - currently 10/1.",
+            }
+          ],
+        },
+        {
+          category: "Weekly Resources",
+          important: true,
+          notes: "Essential links for homework, class materials, and more.",
+          items: [
+            {
+              icon: "fa-solid fa-pencil",
+              title: "Padlet des devoirs",
+              url: "https://padlet.com/sonia_bleulaine/cm1-orange-violet-2025-2026-b959f6av0qtnxtxg",
+              description: "Class homework assignments and resources.",
+            },
+            {
+              icon: 'fa-solid fa-clock',
+              title: "Orange Class Daily Schedule",
+              url: "https://docs.google.com/spreadsheets/d/1zTh_lH6GEnXEfauTieBwt5onntzkM7Auw4Jdbm0yYik/edit?gid=1750799814#gid=1750799814",
+              description: "Typical daily schedule with specials, recess, and lunch times.",
+            },
+            {
+              icon: 'fa-solid fa-photo-film',
+              title: "Class Photos",
+              url: "https://photos.google.com/share/AF1QipODWK9JnHYc2etduUfjkoauRoRKv7uaHzMa01IE1N-LaeK_Kumcrm7220nMy3Cskg?pli=1&key=VUFSUUpHdkg2V3VrREhNdE9Gc21WTktySGZqMjZR",
+              description: "Shared Google Photos album of class events and activities.",
+            }
+          ],
+        },
         {
           category: "Basics",
           notes: "Essential links to get started this school year.",
@@ -131,7 +182,7 @@
               url: "https://docs.google.com/spreadsheets/d/1AUH5gplwdzrAKwU2QAXojHt8Lu3D83HFDiVkQ9oQiYI/edit",
               description: "Full list of the kids in the class.",
             },
-          ],
+          ]
         },
         {
           category: "Apps & Tools",
@@ -144,7 +195,6 @@
               description: "Download the official ISF app for news, events, and resources.",
             },
             {
-
               icon: 'fa-solid fa-mobile-screen',
               title: "SchoolPass App",
               url: "https://www.google.com/url?q=https%3A%2F%2Fapps.apple.com%2Fus%2Fapp%2Fschoolpass%2Fid1522645864&sa=D&sntz=1&usg=AOvVaw0tXGokHFrDKVe0lBsgEqWD",
@@ -157,117 +207,6 @@
               description: "Handy guide on how to use the SchoolPass app.",
             }
           ]
-        },
-        {
-          category: "Key Resources",
-          important: true,
-          notes: "Essential links for homework, class materials, and more.",
-          items: [
-            {
-              icon: 'fa-regular fa-snowflake',
-              title: "Winter Sports Sign up due 10/8",
-              url: "https://docs.google.com/spreadsheets/d/1LxIWdFS5Xx80Xp3STRMpcwmJLXI28IGXTdnxdDctSVg/edit?usp=sharing",
-              description: "Last call for for winter sports sign ups!! The winter season will start the week of November 17th",
-            },
-            {
-              icon: "fa-solid fa-pencil",
-              title: "Padlet des devoirs",
-              url: "https://padlet.com/sonia_bleulaine/cm1-orange-violet-2025-2026-b959f6av0qtnxtxg",
-              description: "Class homework assignments and resources.",
-            },
-            {
-              icon: 'fa-solid fa-thumbs-up',
-              title: "4-Orange Fall Social Sign-Up",
-              url: "https://forms.gle/yz6kTXFr7o6R9iqf8",
-              description: "Vote for a date & sign up for the 4-Orange Fall Social event.",
-            },
-            {
-              icon: 'fa-solid fa-clock',
-              title: "Orange Class Daily Schedule",
-              url: "https://docs.google.com/spreadsheets/d/1zTh_lH6GEnXEfauTieBwt5onntzkM7Auw4Jdbm0yYik/edit?gid=1750799814#gid=1750799814",
-              description:
-                "Typical daily schedule with specials, recess, and lunch times.",
-            },
-            {
-              icon: 'fa-solid fa-handshake',
-              title: "Orange Volunteer Sign-Up Sheet",
-              url: "https://docs.google.com/spreadsheets/d/1UAi5DcO-WPQSxkKzqRElcFEXbSUMYNGgPWjeL5NiMD0/edit?gid=1045102829#gid=1045102829",
-              description: "Spreadsheet to sign up for classroom volunteering - currently 10/1.",
-            },
-
-
-            {
-              icon: 'fa-solid fa-photo-film',
-              title: "Class Photos",
-              url: "https://photos.google.com/share/AF1QipODWK9JnHYc2etduUfjkoauRoRKv7uaHzMa01IE1N-LaeK_Kumcrm7220nMy3Cskg?pli=1&key=VUFSUUpHdkg2V3VrREhNdE9Gc21WTktySGZqMjZR",
-              description: "Shared Google Photos album of class events and activities.",
-            },
-            {
-              icon: 'fa-solid fa-calendar-check',
-              title: "4th Grade Events & Sign-Ups",
-              url: "https://docs.google.com/spreadsheets/d/1TkrwcggnZvKLYnvW4RNzN1Fk30y_b0k-6Py-FJ2csC4/edit?gid=1335933520#gid=1335933520",
-              description: "Spreadsheet of major 4th-grade events, field trips & volunteer sign-ups.",
-            },
-          ],
-        },
-        {
-          category: "Discussion Forums",
-          notes: "Join these groups to connect with other parents.",
-          items: [
-
-            {
-              icon: 'fa-brands fa-whatsapp',
-              title: "4-Orange WhatsApp Group",
-              url: "https://chat.whatsapp.com/EaGCNoy8VKS4yTZw0er0Nv",
-              description: "Join the 4-Orange only parent WhatsApp group for class-specific questions.",
-            },
-
-            {
-              icon: 'fa-brands fa-whatsapp',
-              title: "Grade-wide WhatsApp Group",
-              url: "https://chat.whatsapp.com/ENH4mLEz5tf7jdbsv555Zk",
-              description: "Join the 4th Grade WhatsApp group for grade-specific questions and updates.",
-            }
-          ]
-        },
-        {
-          category: "Schedules & Calendars",
-          notes: "All dates subject to change; always check school communications for latest updates!",
-          items: [
-            {
-              icon: 'fa-solid fa-thumbs-up',
-              title: "4-Orange Fall Social Sign-Up",
-              url: "https://forms.gle/yz6kTXFr7o6R9iqf8",
-              description: "Vote for a date & sign up for the 4-Orange Fall Social event.",
-            },
-            {
-              icon: 'fa-solid fa-calendar',
-              title: "Academic Calendar",
-              url: "https://resources.finalsite.net/images/v1746037044/internationalsf/luekc9r7zmfmjq87qy5f/2025-2026AcademicCalendar.pdf",
-              description:
-                "PDF of the full school year calendar (holidays, breaks, etc).",
-            },
-            {
-              icon: 'fa-solid fa-clock',
-              title: "Orange Class Daily Schedule",
-              url: "https://docs.google.com/spreadsheets/d/1zTh_lH6GEnXEfauTieBwt5onntzkM7Auw4Jdbm0yYik/edit?gid=1750799814#gid=1750799814",
-              description:
-                "Typical daily schedule with specials, recess, and lunch times.",
-            },
-            {
-              icon: 'fa-solid fa-calendar-check',
-              title: "4th Grade Events & Sign-Ups",
-              url: "https://docs.google.com/spreadsheets/d/1TkrwcggnZvKLYnvW4RNzN1Fk30y_b0k-6Py-FJ2csC4/edit?gid=1335933520#gid=1335933520",
-              description: "Spreadsheet of major 4th-grade events, field trips & volunteer sign-ups.",
-            },
-
-            {
-              icon: 'fa-solid fa-calendar-check',
-              title: "Lower School Events & Sign-Ups",
-              url: "https://docs.google.com/spreadsheets/d/1o4KHOJLGtTRB1pogg-YLrVXF1ZPEouOAgLWRiiocQ2I/edit?gid=1335933520#gid=1335933520",
-              description: "Spreadsheet of major Lower School events, field trips & volunteer sign-ups.",
-            },
-          ],
         },
         {
           category: "Class Support & Volunteering",
@@ -284,7 +223,7 @@
               url: "https://docs.google.com/spreadsheets/d/11ujm_5A5fTFQ4qj4L2-YtteEuzYsWoW2WSpJ9eGLWU4/edit?gid=0#gid=0",
               description: "Help manage the Lost & Found bin (typically once a month).",
             },
-          ],
+          ]
         },
         {
           category: "Lunch & Cafeteria",
@@ -302,7 +241,7 @@
               url: "https://planetcafedelivery.com/index.html",
               description: "Order lunches from Planet Cafe for your child.",
             },
-          ],
+          ]
         },
         {
           category: "Extracurricular Activities & Camps",
@@ -337,20 +276,8 @@
               title: "Soccer Camp Sign-Up",
               url: "https://docs.google.com/forms/d/e/1FAIpQLSdC1dJk1px39_Db4aMCNudS_ASBCBAkvsMcKR_0-VbHhF0QJw/viewform",
               description: "Sign up for soccer camps offered during school breaks.",
-            },
-              {
-                icon: 'fa-regular fa-snowflake',
-                title: "Winter Sports Sign up due 10/8",
-                url: "#",
-                description: "Last call for for winter sports sign ups!!",
-              },
-            // {
-            //   icon: 'fa-solid fa-comments',
-            //   title: "Adult French Classes",
-            //   url: "https://www.speakparenteducation.com/adult-french-classes.html",
-            //   description: "Information and sign-up for adult French classes through Speak Parent Education.",
-            // }
-          ],
+            }
+          ]
         },
 
 
