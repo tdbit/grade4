@@ -58,6 +58,3 @@ Add a new object to the `links` array:
 - **Quotes:** Use matching quotes (`"..."` or `'...'`) around text. Don't mix them.
 - **Testing changes:** Open `index.html` in a web browser to see your changes. Refresh the page to see updates.
 
-## Questions?
-
-Email Andrea at amldrummond@gmail.com
