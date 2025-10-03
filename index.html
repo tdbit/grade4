@@ -327,10 +327,11 @@
       ];
 
       function createIconElement(iconClass) {
-        const icon = document.createElement("i");
-        icon.className = `fa-regular ${iconClass}`;
-        icon.style.marginRight = "0.5rem";
-        return icon;
+  const icon = document.createElement("i");
+  // iconClass is like 'fa-solid fa-flag' or 'fa-regular fa-snowflake'
+  icon.className = iconClass;
+  icon.style.marginRight = "0.5rem";
+  return icon;
       }
 
       function createLinkItem(link) {
