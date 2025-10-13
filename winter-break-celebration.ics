@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF 4-Orange//Winter Break Celebration//EN
+BEGIN:VEVENT
+UID:winter-break-celebration-2025@isf.org
+DTSTAMP:20251013T000000Z
+DTSTART;TZID=America/Los_Angeles:20251218T133000
+DTEND;TZID=America/Los_Angeles:20251218T143000
+SUMMARY:4-Orange: Winter Break Celebration
+LOCATION:Classroom
+DESCRIPTION:Parents invited. Snack Afternoon Potluck—share special winter foods from your family’s heritage or traditions.
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR
