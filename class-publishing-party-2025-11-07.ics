@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF 4-Orange//Class Publishing Party//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:class-publishing-party-20251107@isf-grade4-orange
+DTSTAMP:20251017T120000Z
+DTSTART;TZID=America/Los_Angeles:20251107T084500
+DTEND;TZID=America/Los_Angeles:20251107T100000
+SUMMARY:4-Orange: Class Publishing Party
+LOCATION:Classroom
+DESCRIPTION:Joint English & French Publishing Party.\nSchedule:\n8:45–9:45 Presentation\n9:45–10:00 Snack\n\nVolunteer / Snack sign-up: https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=579982706#gid=579982706\nHub: https://isf-grade4-orange.netlify.app/
+URL:https://isf-grade4-orange.netlify.app/
+BEGIN:VALARM
+TRIGGER:-PT24H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 4-Orange: Class Publishing Party
+END:VALARM
+END:VEVENT
+END:VCALENDAR

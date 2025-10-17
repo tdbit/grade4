@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF 4-Orange//Thanksgiving Potluck//EN
+BEGIN:VEVENT
+UID:thanksgiving-potluck-2025@isf.org
+DTSTAMP:20251013T000000Z
+DTSTART;TZID=America/Los_Angeles:20251104T120000
+DTEND;TZID=America/Los_Angeles:20251104T130000
+SUMMARY:4-Orange: Thanksgiving Potluck
+LOCATION:Classroom
+DESCRIPTION:Signups will be posted on this Sheets page: https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=1524118745#gid=1524118745 and most up-to-date details are on the 4-Orange Hub https://andrea--isf-grade4-orange.netlify.app/#
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Reminder
+END:VALARM
+END:VEVENT
+END:VCALENDAR

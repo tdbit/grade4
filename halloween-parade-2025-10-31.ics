@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF 4-Orange//Halloween Parade//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:halloween-parade-20251031@isf-grade4-orange
+DTSTAMP:20251017T120000Z
+DTSTART;TZID=America/Los_Angeles:20251031T143000
+DTEND;TZID=America/Los_Angeles:20251031T145000
+SUMMARY:4-Orange: Halloween Parade
+LOCATION:School Campus (Parade route & classrooms)
+DESCRIPTION:Halloween Parade. Parents welcome. Students wear costumes to school.\n\nDay plan:\n1:15–1:45 Read to Kindergarteners (students)\n2:00–2:20 Classroom snack (students)\n2:30–2:50 Parade (parents welcome)\n\nNote: Parade time is the event time; other activities listed in description for reference.\n\n4-Orange Hub: https://isf-grade4-orange.netlify.app/
+URL:https://isf-grade4-orange.netlify.app/
+BEGIN:VALARM
+TRIGGER:-PT24H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 4-Orange: Halloween Parade
+END:VALARM
+END:VEVENT
+END:VCALENDAR
