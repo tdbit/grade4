@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF 4-Orange//Halloween Treat Drop-off//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+END:STANDARD
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:halloween-treat-dropoff-20251031@isf-grade4-orange
+DTSTAMP:20251017T120000Z
+DTSTART;TZID=America/Los_Angeles:20251031T083000
+DTEND;TZID=America/Los_Angeles:20251031T093000
+SUMMARY:4-Orange: Halloween – Treat Drop-off
+LOCATION:Classroom (morning drop-off)
+DESCRIPTION:Sign up to bring a festive, nut-free, healthy-ish snack (no candy).\nDrop off in the morning at the classroom.\n\nVolunteer sign-up (Google Sheet): https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=579982706#gid=579982706\n\nHub: https://isf-grade4-orange.netlify.app/
+URL:https://isf-grade4-orange.netlify.app/
+BEGIN:VALARM
+TRIGGER:-PT24H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 4-Orange Treat Drop-off
+END:VALARM
+END:VEVENT
+END:VCALENDAR
