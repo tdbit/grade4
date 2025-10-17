@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF 4-Orange//Thanksgiving Potluck//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:thanksgiving-potluck-20251125@isf-grade4-orange
+DTSTAMP:20251017T120000Z
+DTSTART;TZID=America/Los_Angeles:20251125T120000
+DTEND;TZID=America/Los_Angeles:20251125T130000
+SUMMARY:4-Orange: Thanksgiving Potluck
+LOCATION:Classroom
+DESCRIPTION:Thanksgiving Potluck. Parents welcome.\nVolunteer: https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=579982706#gid=579982706\nFood sign-up: https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=1524118745#gid=1524118745\nHub: https://isf-grade4-orange.netlify.app/
+URL:https://isf-grade4-orange.netlify.app/
+BEGIN:VALARM
+TRIGGER:-PT24H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 4-Orange: Thanksgiving Potluck
+END:VALARM
+END:VEVENT
+END:VCALENDAR

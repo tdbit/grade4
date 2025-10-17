@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF 4-Orange//Grandparents Day//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:grandparents-day-20251124@isf-grade4-orange
+DTSTAMP:20251017T120000Z
+DTSTART;TZID=America/Los_Angeles:20251124T090000
+DTEND;TZID=America/Los_Angeles:20251124T110000
+SUMMARY:4-Orange: Grandparents / Grand Friends Day
+LOCATION:Sonia's Room
+DESCRIPTION:Grandparents / Grand Friends Day (morning). Orange class will be in Sonia’s room playing board games. Bring your favorite board game from home!\n\nClass RSVP: https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=2090317402#gid=2090317402\nHub: https://isf-grade4-orange.netlify.app/
+URL:https://isf-grade4-orange.netlify.app/
+BEGIN:VALARM
+TRIGGER:-PT24H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: 4-Orange: Grandparents Day
+END:VALARM
+END:VEVENT
+END:VCALENDAR
