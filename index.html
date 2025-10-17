@@ -26,12 +26,125 @@
         font-size: 1.8rem;
         margin: 0;
       }
+      header p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+      }
+      .tip {
+        background: white;
+        border-radius: 0.2rem;
+        padding: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      section h2 {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.1rem;
+        margin: 1.5rem 0 0 0;
+
+        + p {
+          margin-top: 0.25rem;
+          font-size: 0.8rem;
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      hr {
+        /* white line with slight padding */
+        border: none;
+        border-top: 2px solid rgba(255, 255, 255, 0.5);
+        margin: 2rem 0;
+      }
+      li a {
+        display: flex;
+        border-radius: 0.2rem;
+        gap: 0.75rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        background: white;
+        padding: 1rem;
+        padding-bottom: 0.5rem;
+        text-decoration: none;
+        color: #111827;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 125%;
+      }
+      li a:hover {
+        background: #f9fafb;
+      }
+      li div i {
+        padding-top: 0.5rem;
+      }
+      li a p {
+        color: #6b7280;
+        margin-top: 0.25rem;
+        font-weight: 300;
+      }
+      .fa-solid,
+      .fa-regular {
+        color:orangered;
+        font-size: 2rem;
+        overflow: hidden;
+      }
+      footer {
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      header a,
+      footer a {
+        color: #fff7ed;
+      }
     </style>
     <script src="https://kit.fontawesome.com/a38f30af22.js" crossorigin="anonymous"></script>
     <script>
   // --- BEGIN: links array ---
   const links = [
-        // 1) Time Sensitive
+        {
+          category: "Grade & School Info Hubs",
+          notes: "Details various events, their deadlines, program descriptions, and where to find updates.",
+          items: [
+            {
+              icon: 'fa-solid fa-calendar-check',
+              title: "4th Grade Events & Sign-Ups",
+              url: "https://docs.google.com/spreadsheets/d/1TkrwcggnZvKLYnvW4RNzN1Fk30y_b0k-6Py-FJ2csC4/edit?gid=1335933520#gid=1335933520",
+              description: "Spreadsheet of major 4th-grade events, field trips & volunteer sign-ups.",
+            },
+            {
+              icon: 'fa-solid fa-calendar-check',
+              title: "Lower School Events & Sign-Ups",
+              url: "https://docs.google.com/spreadsheets/d/1o4KHOJLGtTRB1pogg-YLrVXF1ZPEouOAgLWRiiocQ2I/edit?gid=1335933520#gid=1335933520",
+              description: "Spreadsheet of major Lower School events, field trips & volunteer sign-ups.",
+            },
+            {
+              icon: 'fa-solid fa-file-invoice-dollar',
+              title: "FACTs Management",
+              url: "https://factsmgt.com/",
+              description: "Financial portal for the school where you can also find Conservatory Music Lesson and ECC Class bills.",
+            },
+            {
+              icon: 'fa-solid fa-chalkboard',
+              title: "BlackBaud",
+              url: "https://internationalsf.myschoolapp.com/app/parent?svcid=edu#resourceboard",
+              description: "School resource portal where parent and student directory can be found.",
+            },
+            {
+              icon: 'fa-solid fa-calendar',
+              title: "Academic Calendar",
+              url: "https://resources.finalsite.net/images/v1746037044/internationalsf/luekc9r7zmfmjq87qy5f/2025-2026AcademicCalendar.pdf",
+              description: "PDF of the full school year calendar (holidays, breaks, etc).",
+            }
+          ]
+        },
         {
           category: "Time Sensitive",
           important: true,
@@ -75,8 +188,6 @@
               }
           ],
         },
-
-        // 2) Save the Date
         {
           category: "Save the Date",
           notes: "List of upcoming Classroom Events",
@@ -95,89 +206,100 @@
             }
           ]
         },
-
-        // Add: Decorate with Sonia event (links to .ics)
+          {
+            category: "Weekly Resources",
+            important: true,
+            notes: "Essential links for homework, class materials, and more.",
+            items: [
+              {
+                icon: "fa-solid fa-pencil",
+                title: "Padlet des devoirs",
+                url: "https://padlet.com/sonia_bleulaine/cm1-orange-violet-2025-2026-b959f6av0qtnxtxg",
+                description: "Class homework assignments and resources.",
+              },
+              {
+                icon: 'fa-solid fa-clock',
+                title: "Orange Class Daily Schedule",
+                url: "https://docs.google.com/spreadsheets/d/1zTh_lH6GEnXEfauTieBwt5onntzkM7Auw4Jdbm0yYik/edit?gid=1750799814#gid=1750799814",
+                description: "Typical daily schedule with specials, recess, and lunch times.",
+              },
+              {
+                icon: 'fa-solid fa-photo-film',
+                title: "Class Photos",
+                url: "https://photos.google.com/share/AF1QipODWK9JnHYc2etduUfjkoauRoRKv7uaHzMa01IE1N-LaeK_Kumcrm7220nMy3Cskg?pli=1&key=VUFSUUpHdkg2V3VrREhNdE9Gc21WTktySGZqMjZR",
+                description: "Shared Google Photos album of class events and activities.",
+              },
+              {
+                icon: 'fa-solid fa-image',
+                title: "Lost and Found (photos) - Donated Thursday 11/6",
+                url: "https://photos.google.com/share/AF1QipP8Hh8YlCl4Db3m0oUi_NYfn3q8cljQwdPPcvKcXHpw8Q-l6xRkRifYd5POlP9IDA?key=Y2JqeHVOMHdkV2VSVnY1OFpqR01hRU15Y0RmY3Zn",
+                description: "Lost and Found is located in the Oak Yard shed. You can check it 8:00–8:15 a.m. and 3:00–6:00 p.m. via the Hickory entrance, or 8:15 a.m.–3:00 p.m. via the Oak Main entrance with sign-in. Shed access only; classrooms and lockers are closed.",
+              },
+            ],
+          },
+          {
+            category: "Basics",
+            notes: "Essential links to get started this school year.",
+            items: [
+              {
+                icon: 'fa-solid fa-user',
+                title: "Meet the teachers",
+                url: "https://example.com/newsletter",
+                description:"1-min intro video & welcome letter from your kids' teachers.",
+              },
+              {
+                icon: 'fa-solid fa-person-chalkboard',
+                title: "La Rentrée Presentation",
+                url: "https://docs.google.com/presentation/d/1V5DURXJbg_GhN1fhzSlGo8UwrPjlO4syBIFzW7_QYFY/edit?usp=sharing",
+                description:
+                  "Slides from the 4th Grade Orange Back to School night.",
+              },
+              {
+                icon: 'fa-solid fa-child',
+                title: "Class List",
+                url: "https://docs.google.com/spreadsheets/d/1AUH5gplwdzrAKwU2QAXojHt8Lu3D83HFDiVkQ9oQiYI/edit",
+                description: "Full list of the kids in the class.",
+              },
+            ]
+          },
+          {
+            category: "Grade & School Info Hubs",
+            notes: "Details various events, their deadlines, program descriptions, and where to find updates.",
+            items: [
+              {
+                icon: 'fa-solid fa-calendar-check',
+                title: "4th Grade Events & Sign-Ups",
+                url: "https://docs.google.com/spreadsheets/d/1TkrwcggnZvKLYnvW4RNzN1Fk30y_b0k-6Py-FJ2csC4/edit?gid=1335933520#gid=1335933520",
+                description: "Spreadsheet of major 4th-grade events, field trips & volunteer sign-ups.",
+              },
+              {
+                icon: 'fa-solid fa-calendar-check',
+                title: "Lower School Events & Sign-Ups",
+                url: "https://docs.google.com/spreadsheets/d/1o4KHOJLGtTRB1pogg-YLrVXF1ZPEouOAgLWRiiocQ2I/edit?gid=1335933520#gid=1335933520",
+                description: "Spreadsheet of major Lower School events, field trips & volunteer sign-ups.",
+              },
+              {
+                icon: 'fa-solid fa-file-invoice-dollar',
+                title: "FACTs Management",
+                url: "https://factsmgt.com/",
+                description: "Financial portal for the school where you can also find Conservatory Music Lesson and ECC Class bills.",
+              },
+              {
+                icon: 'fa-solid fa-chalkboard',
+                title: "BlackBaud",
+                url: "https://internationalsf.myschoolapp.com/app/parent?svcid=edu#resourceboard",
+                description: "School resource portal where parent and student directory can be found.",
+              },
+              {
+                icon: 'fa-solid fa-calendar',
+                title: "Academic Calendar",
+                url: "https://resources.finalsite.net/images/v1746037044/internationalsf/luekc9r7zmfmjq87qy5f/2025-2026AcademicCalendar.pdf",
+                description: "PDF of the full school year calendar (holidays, breaks, etc).",
+              }
+            ]
+          },
         {
-          category: "Save the Date - Decorate",
-          notes: "Classroom decorating & volunteer sign-up",
-          items: [
-            {
-              icon: 'fa-solid fa-calendar-day',
-              title: "4-Orange: Decorate with Sonia (Oct 28, 2025)",
-              url: "decorate-with-sonia-2025-10-28.ics",
-              description: "Help decorate the 4-Orange classroom with Sonia. Rooms: 312 (Orange) & 311 (Violet). Needed: 2 volunteers. See wishlist & sign-up in the event file.",
-            }
-          ]
-        },
-
-        // 3) Basics
-        {
-          category: "Basics",
-          notes: "Essential links to get started this school year.",
-          items: [
-            {
-              icon: 'fa-solid fa-user',
-              title: "Meet the teachers",
-              url: "https://example.com/newsletter",
-              description:"1-min intro video & welcome letter from your kids' teachers.",
-            },
-            {
-              icon: 'fa-solid fa-person-chalkboard',
-              title: "La Rentrée Presentation",
-              url: "https://docs.google.com/presentation/d/1V5DURXJbg_GhN1fhzSlGo8UwrPjlO4syBIFzW7_QYFY/edit?usp=sharing",
-              description:
-                "Slides from the 4th Grade Orange Back to School night.",
-            },
-            {
-              icon: 'fa-solid fa-child',
-              title: "Class List",
-              url: "https://docs.google.com/spreadsheets/d/1AUH5gplwdzrAKwU2QAXojHt8Lu3D83HFDiVkQ9oQiYI/edit",
-              description: "Full list of the kids in the class.",
-            },
-          ]
-        },
-
-        // 4) Grade & School Info Hubs
-        {
-          category: "Grade & School Info Hubs",
-          notes: "Details various events, their deadlines, program descriptions, and where to find updates.",
-          items: [
-            {
-              icon: 'fa-solid fa-calendar-check',
-              title: "4th Grade Events & Sign-Ups",
-              url: "https://docs.google.com/spreadsheets/d/1TkrwcggnZvKLYnvW4RNzN1Fk30y_b0k-6Py-FJ2csC4/edit?gid=1335933520#gid=1335933520",
-              description: "Spreadsheet of major 4th-grade events, field trips & volunteer sign-ups.",
-            },
-            {
-              icon: 'fa-solid fa-calendar-check',
-              title: "Lower School Events & Sign-Ups",
-              url: "https://docs.google.com/spreadsheets/d/1o4KHOJLGtTRB1pogg-YLrVXF1ZPEouOAgLWRiiocQ2I/edit?gid=1335933520#gid=1335933520",
-              description: "Spreadsheet of major Lower School events, field trips & volunteer sign-ups.",
-            },
-            {
-              icon: 'fa-solid fa-file-invoice-dollar',
-              title: "FACTs Management",
-              url: "https://factsmgt.com/",
-              description: "Financial portal for the school where you can also find Conservatory Music Lesson and ECC Class bills.",
-            },
-            {
-              icon: 'fa-solid fa-chalkboard',
-              title: "BlackBaud",
-              url: "https://internationalsf.myschoolapp.com/app/parent?svcid=edu#resourceboard",
-              description: "School resource portal where parent and student directory can be found.",
-            },
-            {
-              icon: 'fa-solid fa-calendar',
-              title: "Academic Calendar",
-              url: "https://resources.finalsite.net/images/v1746037044/internationalsf/luekc9r7zmfmjq87qy5f/2025-2026AcademicCalendar.pdf",
-              description: "PDF of the full school year calendar (holidays, breaks, etc).",
-            }
-          ]
-        },
-
-        // 5) Order Lunch (renamed)
-        {
-          category: "Order Lunch",
+          category: "Lunch & Cafeteria",
           notes: "Lunch ordering and menu information.",
           items: [
             {
@@ -194,8 +316,6 @@
             },
           ]
         },
-
-        // 6) Extracurricular Activities & Camps
         {
           category: "Extracurricular Activities & Camps",
           notes: "After school and vacation camps available for your child.",
@@ -221,40 +341,9 @@
           ]
         },
 
-        // Remaining: Weekly Resources (kept last)
-        {
-          category: "Weekly Resources",
-          important: true,
-          notes: "Essential links for homework, class materials, and more.",
-          items: [
-            {
-              icon: "fa-solid fa-pencil",
-              title: "Padlet des devoirs",
-              url: "https://padlet.com/sonia_bleulaine/cm1-orange-violet-2025-2026-b959f6av0qtnxtxg",
-              description: "Class homework assignments and resources.",
-            },
-            {
-              icon: 'fa-solid fa-clock',
-              title: "Orange Class Daily Schedule",
-              url: "https://docs.google.com/spreadsheets/d/1zTh_lH6GEnXEfauTieBwt5onntzkM7Auw4Jdbm0yYik/edit?gid=1750799814#gid=1750799814",
-              description: "Typical daily schedule with specials, recess, and lunch times.",
-            },
-            {
-              icon: 'fa-solid fa-photo-film',
-              title: "Class Photos",
-              url: "https://photos.google.com/share/AF1QipODWK9JnHYc2etduUfjkoauRoRKv7uaHzMa01IE1N-LaeK_Kumcrm7220nMy3Cskg?pli=1&key=VUFSUUpHdkg2V3VrREhNdE9Gc21WTktySGZqMjZR",
-              description: "Shared Google Photos album of class events and activities.",
-            },
-            {
-              icon: 'fa-solid fa-image',
-              title: "Lost and Found (photos) - Donated Thursday 11/6",
-              url: "https://photos.google.com/share/AF1QipP8Hh8YlCl4Db3m0oUi_NYfn3q8cljQwdPPcvKcXHpw8Q-l6xRkRifYd5POlP9IDA?key=Y2JqeHVOMHdkV2VSVnY1OFpqR01hRU15Y0RmY3Zn",
-              description: "Lost and Found is located in the Oak Yard shed. You can check it 8:00–8:15 a.m. and 3:00–6:00 p.m. via the Hickory entrance, or 8:15 a.m.–3:00 p.m. via the Oak Main entrance with sign-in. Shed access only; classrooms and lockers are closed.",
-            },
-          ],
-        },
 
-  ];
+
+      ];
 
       function createIconElement(iconClass) {
   const icon = document.createElement("i");
