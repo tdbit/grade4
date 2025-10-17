@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF Grade4//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:decorate-sonia-20251028@isf-grade4-orange
+DTSTAMP:20251017T120000Z
+DTSTART:20251028T160000Z
+DTEND:20251028T173000Z
+SUMMARY:4-Orange: Decorate with Sonia
+LOCATION:Rooms 312 (Orange) & 311 (Violet)
+DESCRIPTION:Help decorate the 4-Orange classroom with Sonia.\nRooms: 312 (Orange) and 311 (Violet).\nNeeded: 2 volunteers.\n\nAmazon Wishlist: https://www.amazon.com/hz/wishlist/ls/21XI6FUR8FTB1?ref_=wl_share\nVolunteer sign-up (Google Sheet): https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=579982706#gid=579982706\nHub: https://isf-grade4-orange.netlify.app/
+URL:https://isf-grade4-orange.netlify.app/
+END:VEVENT
+END:VCALENDAR
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF Grade4//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:decorate-sonia-20251028@isf-grade4-orange
+DTSTAMP:20251014T120000Z
+DTSTART:20251028T160000Z
+DTEND:20251028T173000Z
+SUMMARY:4-Orange: Decorate with Sonia
+LOCATION:Rooms 312 (Orange) & 311 (Violet)
+DESCRIPTION:Help decorate the 4-Orange classroom with Sonia.\nNeeded: 2 volunteers.\nAmazon Wishlist: https://www.amazon.com/hz/wishlist/ls/21XI6FUR8FTB1?ref_=wl_share\nVolunteer sign-up: https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=579982706#gid=579982706\nHub: https://isf-grade4-orange.netlify.app/
+END:VEVENT
+END:VCALENDAR
