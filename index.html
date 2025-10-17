@@ -98,6 +98,13 @@
         text-decoration: none;
         color: #374151;
       }
+      .date-label {
+        font-size: 0.75rem;
+        color: #6b7280;
+        margin-left: 0.5rem;
+        display: inline-block;
+        margin-top: 0.25rem;
+      }
       .calendar-btn i { color: #ef4444; font-size: 1.1rem; }
       li a:hover {
         background: #f9fafb;
@@ -144,12 +151,14 @@
           title: "Contribute to the Class Family Directory",
           url: "https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=950627079#gid=950627079",
           description: "Help us build a voluntary class contact list for birthdays, playdates, and social gatherings. Please use it only for class celebrations—no mass emails—so we can connect and build community",
+          anchor: true
         },
         {
           icon: 'fa-solid fa-hat-wizard',
           title: "Halloween: Donate Decorations - Now!",
           url: "https://www.amazon.com/hz/wishlist/ls/21XI6FUR8FTB1?ref_=wl_share",
           description: "Support the fun by donating from our classroom wishlist. Pick an item here: Amazon Wishlist →",
+          anchor: true
         },
 
         // Dated items (newest → oldest)
@@ -159,6 +168,7 @@
           ics: "winter-break-celebration.ics",
           url: "winter-break-celebration.ics",
           description: "Parents invited! Snack-Potluck with family winter traditional food; presentations and snack times listed in the event.",
+          date: '2025-12-18'
         },
 
         {
@@ -167,6 +177,7 @@
           ics: "thanksgiving-potluck-2025-11-25.ics",
           url: "thanksgiving-potluck-2025-11-25.ics",
           description: "Thanksgiving Potluck. Parents welcome. Volunteer and food sign-ups linked in the event.",
+          date: '2025-11-25'
         },
 
         {
@@ -175,6 +186,7 @@
           ics: "grandparents-day-2025-11-24.ics",
           url: "grandparents-day-2025-11-24.ics",
           description: "Grandparents / Grand Friends Day morning. Orange class in Sonia's room playing board games. Bring a favorite board game!",
+          date: '2025-11-24'
         },
 
         {
@@ -183,6 +195,7 @@
           ics: "class-publishing-party-2025-11-07.ics",
           url: "class-publishing-party-2025-11-07.ics",
           description: "Joint English & French Publishing Party. Presentations 8:45–9:45, snack 9:45–10:00. Parents welcome.",
+          date: '2025-11-07'
         },
 
         {
@@ -191,6 +204,7 @@
           ics: "thanksgiving-potluck.ics",
           url: "https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=0",
           description: "Join us for a classroom Thanksgiving Potluck. Details to follow.",
+          date: '2025-11-04'
         },
 
         // Halloween cluster (grouped together)
@@ -200,6 +214,7 @@
           ics: "halloween-parade-2025-10-31.ics",
           url: "halloween-parade-2025-10-31.ics",
           description: "Halloween Parade. Parents welcome. Students wear costumes to school. Parade time: 2:30–2:50 PM (other activities listed in description).",
+          date: '2025-10-31'
         },
         {
           icon: 'fa-solid fa-apple-whole',
@@ -207,6 +222,7 @@
           ics: "halloween-treat-dropoff-2025-10-31.ics",
           url: "https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=579982706#gid=579982706",
           description: "We need volunteers to bring nut-free, healthy-ish snacks (no candy). Drop off in the morning.",
+          date: '2025-10-31'
         },
         {
           icon: 'fa-solid fa-mask',
@@ -214,6 +230,7 @@
           ics: "decorate-with-sonia-2025-10-28.ics",
           url: "https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=579982706#gid=579982706",
           description: "Volunteer to help transform the classroom for Halloween — 4:00–5:30 PM (decoration time).",
+          date: '2025-10-28'
         },
 
         // MAP testing (multi-event .ics: sorts by latest date Oct 27)
@@ -223,6 +240,7 @@
           ics: "map-testing-2025.ics",
           url: "https://www.youtube.com/watch?v=79h958Qd8sA",
           description: "Fall MAP Growth testing on Math and Reading. Avoid planned absences; extra sleep the night before helps.",
+          date: '2025-10-27'
         }
       ]
     },
@@ -394,6 +412,20 @@
         p.textContent = link.description || "";
         div.appendChild(p);
 
+        // small visible date label for dated items
+        if (link.date) {
+          const dateSpan = document.createElement('span');
+          dateSpan.className = 'date-label';
+          try {
+            const d = new Date(link.date + 'T00:00:00');
+            const opts = { month: 'short', day: 'numeric' };
+            dateSpan.textContent = d.toLocaleDateString(undefined, opts);
+          } catch (e) {
+            dateSpan.textContent = link.date;
+          }
+          div.appendChild(dateSpan);
+        }
+
         const box = document.createElement("div");
         const icon = createIconElement(link.icon || 'fa-question-circle');
         box.appendChild(icon);
@@ -437,8 +469,17 @@
         notes.textContent = category.notes || "";
         section.appendChild(notes);
 
+        // sort items: anchored items first (keep original order), then items with dates sorted by date desc (nearest/newest first), then any remaining undated items
+        const anchored = category.items.filter(i => i.anchor);
+        const dated = category.items.filter(i => i.date && !i.anchor).sort((a,b) => {
+          // compare ISO dates ascending (earliest -> latest)
+          return (a.date || '').localeCompare(b.date || '');
+        });
+        const undated = category.items.filter(i => !i.date && !i.anchor);
+        const ordered = [...anchored, ...dated, ...undated];
+
         const ul = document.createElement("ul");
-        category.items.forEach((item) => {
+        ordered.forEach((item) => {
           ul.appendChild(createLinkItem(item));
         });
         section.appendChild(ul);
