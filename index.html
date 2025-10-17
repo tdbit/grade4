@@ -86,8 +86,10 @@
         background: #f9fafb;
       }
       .calendar-btn {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        min-height: 36px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -97,7 +99,10 @@
         box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         text-decoration: none;
         color: #374151;
+        padding: 0;
       }
+      .calendar-btn svg { width: 18px; height: 18px; display: block; }
+      .calendar-btn i { font-size: 18px; line-height: 18px; }
       .date-label {
         font-size: 0.75rem;
         color: #6b7280;
@@ -105,7 +110,7 @@
         display: inline-block;
         margin-top: 0.25rem;
       }
-      .calendar-btn i { color: #ef4444; font-size: 1.1rem; }
+      .calendar-btn i { color: #ef4444; }
       li a:hover {
         background: #f9fafb;
       }
