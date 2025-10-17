@@ -363,7 +363,7 @@
       function createLinkItem(link) {
         const li = document.createElement("li");
   const a = document.createElement("a");
-  a.href = link.url;
+  a.href = link.url || '#';
   a.target = "_blank";
   a.className = 'main-link';
         const title = document.createElement("strong");
@@ -383,10 +383,11 @@
         a.appendChild(box);
         a.appendChild(div);
 
-        // If an .ics file is provided, add a small calendar button next to the title
-        if (link.ics) {
+        // If an .ics file is provided (or the url itself is an .ics), add a small calendar button next to the title
+        const icsHref = link.ics || (typeof link.url === 'string' && link.url.endsWith('.ics') ? link.url : null);
+        if (icsHref) {
           const calA = document.createElement('a');
-          calA.href = link.ics;
+          calA.href = icsHref;
           calA.className = 'calendar-btn';
           calA.title = 'Add to calendar (ICS)';
           calA.setAttribute('aria-label', `Add ${link.title} to calendar`);
