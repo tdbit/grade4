@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF 4-Orange//Lost and Found Notice//EN
+BEGIN:VEVENT
+UID:lost-and-found-2025-12-05@isf.org
+DTSTAMP:20251112T120000Z
+DTSTART;TZID=America/Los_Angeles:20251205T090000
+DTEND;TZID=America/Los_Angeles:20251205T100000
+SUMMARY:4-Orange: Lost and Found - Next Batch Donated Friday 12/5
+LOCATION:Oak Yard shed
+DESCRIPTION:All 4th grade families — Next batch will be donated on Friday 12/5.\n\nPhotos of items: https://photos.app.goo.gl/QimWGs7oSrBWFBFx5\n\nPlease check the shed during drop-off/pick-up hours. Items not claimed may be donated after 12/5.
+BEGIN:VALARM
+TRIGGER:-PT24H
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Lost and Found donation tomorrow (12/5)
+END:VALARM
+END:VEVENT
+END:VCALENDAR
