@@ -9,6 +9,7 @@ DTEND;TZID=America/Los_Angeles:20251218T143000
 SUMMARY:4-Orange: Winter Break Celebration
 LOCATION:Classroom
 DESCRIPTION:Parents invited. Snack Afternoon Potluck—share special winter foods from your family’s heritage or traditions.
+URL:https://docs.google.com/spreadsheets/d/1mZjFs-Vrv7BQnNW7Xuux-UWJfGDyYML-k-dwC_VujR0/edit?gid=1585324197#gid=1585324197
 BEGIN:VALARM
 TRIGGER:-PT15M
 ACTION:DISPLAY

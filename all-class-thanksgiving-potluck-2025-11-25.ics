@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ISF 4-Orange//All-Class Thanksgiving Potluck//EN
+BEGIN:VEVENT
+UID:all-class-thanksgiving-potluck-2025@isf.org
+DTSTAMP:20251112T120000Z
+DTSTART;TZID=America/Los_Angeles:20251125T120000
+DTEND;TZID=America/Los_Angeles:20251125T130000
+SUMMARY:4-Orange: All-Class Thanksgiving Potluck Info
+LOCATION:150 Oak St\, San Francisco\, CA 94102
+DESCRIPTION:All students + 20 parent volunteers invited\n\nSign-up sheet: https://docs.google.com/spreadsheets/d/1TkrwcggnZvKLYnvW4RNzN1Fk30y_b0k-6Py-FJ2csC4/edit?gid=1398681894#gid=1398681894\n\nDetails: All-Class Thanksgiving Potluck. Sign up to bring food for the "all class" Thanksgiving feast. Please list ingredients for allergy safety. Contact the organizers via the sign-up sheet if you have questions.
+DESCRIPTION:All 4th grade students will attend + 20 Parent Volunteers from each grade\n\nEveryone should sign up to bring food here: https://docs.google.com/spreadsheets/d/1TkrwcggnZvKLYnvW4RNzN1Fk30y_b0k-6Py-FJ2csC4/edit?gid=1398681894#gid=1398681894\n\n20 Parent Volunteers are invited to join. Volunteer here: https://docs.google.com/spreadsheets/d/1TkrwcggnZvKLYnvW4RNzN1Fk30y_b0k-6Py-FJ2csC4/edit?gid=1625834984#gid=1625834984\n\nDetails: All-Class Thanksgiving Potluck. Sign up to bring food for the "all class" Thanksgiving feast. Please list ingredients for allergy safety. Contact the organizers via the sign-up sheet if you have questions.
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Reminder: All-Class Thanksgiving Potluck in 30 minutes
+END:VALARM
+END:VEVENT
+END:VCALENDAR
